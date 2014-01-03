@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Scaleform 注意事项 | JaoYE</title>
+  <title>AS-colortransform | JaoYE</title>
   <meta name="author" content="JaoYE">
   
-  <meta name="description" content="本文章用来记录as移植到scaleform的问题汇总 不定期更新  
-Sprite
+  <meta name="description" content="给MovieClip设置颜色首先要导入两个类;
+1
+2
+import flash.geom.colortransform;  
+import flash.geom.transform;
 
-startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻挡之后的点击事件.">
+
+创建两个实例
+1
+2
+3
+4
+5
+6
+7
+var colortf:colortransform = new c">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Scaleform 注意事项"/>
+  <meta property="og:title" content="AS-colortransform"/>
   <meta property="og:site_name" content="JaoYE"/>
 
   
@@ -52,22 +64,40 @@ startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻�
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-12-28T07:49:29.000Z"><a href="/2013/12/28/scaleform-notice/">Dec 28 2013</a></time>
+        <time datetime="2014-01-03T00:41:51.000Z"><a href="/2014/01/03/as-colortransform/">Jan 3 2014</a></time>
       
       
   
-    <h1 class="title">Scaleform 注意事项</h1>
+    <h1 class="title">AS-colortransform</h1>
   
 
     </header>
     <div class="entry">
       
-        <p>本文章用来记录as移植到scaleform的问题汇总 <strong>不定期更新</strong>  </p>
-<h3>Sprite</h3>
-<ul>
-<li>startDrag和stopDrag要成对使用  <pre><code>  如果没有执行stopDrag操作,会阻挡之后的点击事件.</code></pre>
-</li>
-</ul>
+        <p>给MovieClip设置颜色<br>首先要导入两个类;</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>import flash.geom.colortransform;  
+import flash.geom.transform;
+</pre></td></tr></table></figure>
+
+<p>创建两个实例</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="keyword">var</span> colortf:colortransform = <span class="keyword">new</span> colortransform();
+<span class="keyword">var</span> tf:transform = <span class="keyword">new</span> transform(要应用颜色的MovieClip);
+
+<span class="comment">//设置colortransform实例的颜色</span>
+colortf.color = <span class="number">0x00ffff</span>;
+<span class="comment">//设置colortransform属性</span>
+tf.colortransform = colortf;
+</pre></td></tr></table></figure>
+
 
       
     </div>
@@ -75,11 +105,6 @@ startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻�
       
         
         
-  
-  <div class="tags">
-    <a href="/tags/Scaleform/">Scaleform</a>
-  </div>
-
         
   <div class="addthis addthis_toolbox addthis_default_style">
     
@@ -120,7 +145,7 @@ startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻�
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://jaoye.com/2013/12/28/scaleform-notice/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://jaoye.com/2014/01/03/as-colortransform/" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>

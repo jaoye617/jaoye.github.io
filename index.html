@@ -48,6 +48,61 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-01-03T00:41:51.000Z"><a href="/2014/01/03/as-colortransform/">Jan 3 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/01/03/as-colortransform/">AS-colortransform</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>给MovieClip设置颜色<br>首先要导入两个类;</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>import flash.geom.colortransform;  
+import flash.geom.transform;
+</pre></td></tr></table></figure>
+
+<p>创建两个实例</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="keyword">var</span> colortf:colortransform = <span class="keyword">new</span> colortransform();
+<span class="keyword">var</span> tf:transform = <span class="keyword">new</span> transform(要应用颜色的MovieClip);
+
+<span class="comment">//设置colortransform实例的颜色</span>
+colortf.color = <span class="number">0x00ffff</span>;
+<span class="comment">//设置colortransform属性</span>
+tf.colortransform = colortf;
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-12-28T07:49:29.000Z"><a href="/2013/12/28/scaleform-notice/">Dec 28 2013</a></time>
       
       
@@ -188,7 +243,7 @@
   </div>
   <footer id="footer" class="inner"><div class="alignleft">
   
-  &copy; 2013 JaoYE
+  &copy; 2014 JaoYE
   
 </div>
 <div class="clearfix"></div></footer>
