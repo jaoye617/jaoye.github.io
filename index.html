@@ -48,6 +48,50 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-01-15T14:56:19.000Z"><a href="/2014/01/15/sublime_text_add_open_with_sublime_text_menu/">Jan 15 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/01/15/sublime_text_add_open_with_sublime_text_menu/">Sublime Text 2 右键菜单设置</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>sublime text 2 是个很性感的编辑器  呵呵~<br>如果是安装版 通常会自动添加 右键菜单 Open with Sublime Text 2<br>但是如果是用的绿色版 就没有这个福利了<br>沒有福利咱们自己动手丰衣足食<br>1.添加右键菜单<br>win+r 启动运行 输入 Regedit<br>找到 &#39;HKEY<em>CLASSES<em>ROOT\*\shell&#39;<br>添加<strong>新建项</strong>“Open With Sublime Text 2”,再在Open With Sublime Text 2 下面<strong>新建项</strong>command<br>在command 下面新建__字符串值</em></em><br>数据填写  </p>
+<blockquote>
+<p>D:\tools\Sublime Text 2\sublime_text.exe “%1”  </p>
+</blockquote>
+<p>保存.完成添加右键菜单  </p>
+<p>2.给Open with Sublime Text 2添加Icon<br>添加完右键菜单 总感觉那里怪怪的 原来是菜单上缺少Icon<br>找到Open With Sublime Text 2 的注册表所在项<br>新建 <strong>字符串值</strong> 名称为Icon 类型REG_SZ 数据填写</p>
+<blockquote>
+<p>D:\tools\Sublime Text 2\sublime_text.exe,0  </p>
+</blockquote>
+<p>好了这样就添加上Icon了.  </p>
+<blockquote>
+<p>PS:注意是在Open with Sublime Text 2 下建立新的 <strong>字符串值</strong>  不是在command下</p>
+</blockquote>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-01-03T00:41:51.000Z"><a href="/2014/01/03/as-colortransform/">Jan 3 2014</a></time>
       
       
