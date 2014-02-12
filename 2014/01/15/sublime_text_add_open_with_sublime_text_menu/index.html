@@ -6,7 +6,11 @@
   <title>Sublime Text 2 右键菜单设置 | JaoYE</title>
   <meta name="author" content="JaoYE">
   
-  <meta name="description" content="sublime text 2 是个很性感的编辑器  呵呵~如果是安装版 通常会自动添加 右键菜单 Open with Sublime Text 2但是如果是用的绿色版 就没有这个福利了沒有福利咱们自己动手丰衣足食1.添加右键菜单win+r 启动运行 输入 Regedit找到 &amp;#39;HKEYCLA">
+  <meta name="description" content="sublime text 2 是个很性感的编辑器  呵呵~如果是安装版 通常会自动添加 右键菜单 Open with Sublime Text 2但是如果是用的绿色版 就没有这个福利了沒有福利咱们自己动手丰衣足食1.添加右键菜单win+r 启动运行 输入 Regedit找到 &amp;#39;HKEYCLASSESROOT\*\shell&amp;#39;添加新建项“Open With Sublime Text 2”,再在Open With Sublime Text 2 下面新建项command在command 下面新建__字符串值数据填写  
+
+D:\tools\Sublime Text 2\sublime_text.exe “%1”  
+
+保存.完成添加右键菜单">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -63,8 +67,7 @@
 <blockquote>
 <p>D:\tools\Sublime Text 2\sublime_text.exe “%1”  </p>
 </blockquote>
-<p>保存.完成添加右键菜单  </p>
-<p>2.给Open with Sublime Text 2添加Icon<br>添加完右键菜单 总感觉那里怪怪的 原来是菜单上缺少Icon<br>找到Open With Sublime Text 2 的注册表所在项<br>新建 <strong>字符串值</strong> 名称为Icon 类型REG_SZ 数据填写</p>
+<p>保存.完成添加右键菜单<br><a id="more"></a><br>2.给Open with Sublime Text 2添加Icon<br>添加完右键菜单 总感觉那里怪怪的 原来是菜单上缺少Icon<br>找到Open With Sublime Text 2 的注册表所在项<br>新建 <strong>字符串值</strong> 名称为Icon 类型REG_SZ 数据填写</p>
 <blockquote>
 <p>D:\tools\Sublime Text 2\sublime_text.exe,0  </p>
 </blockquote>

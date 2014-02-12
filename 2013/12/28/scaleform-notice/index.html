@@ -9,7 +9,12 @@
   <meta name="description" content="本文章用来记录as移植到scaleform的问题汇总 不定期更新  
 Sprite
 
-startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻挡之后的点击事件.">
+startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻挡之后的点击事件.  
+
+
+Session
+
+尽量不要给刚刚add到舞台对象添加事件 addEventListener  ">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -65,7 +70,12 @@ startDrag和stopDrag要成对使用    如果没有执行stopDrag操作,会阻�
         <p>本文章用来记录as移植到scaleform的问题汇总 <strong>不定期更新</strong>  </p>
 <h3>Sprite</h3>
 <ul>
-<li>startDrag和stopDrag要成对使用  <pre><code>  如果没有执行stopDrag操作,会阻挡之后的点击事件.</code></pre>
+<li><strong>startDrag</strong>和<strong>stopDrag</strong>要成对使用  <pre><code>  如果没有执行stopDrag操作,会阻挡之后的点击事件.  </code></pre>
+</li>
+</ul>
+<h3>Session</h3>
+<ul>
+<li>尽量不要给刚刚add到舞台对象添加事件 <strong>addEventListener</strong>  <pre><code>  给刚刚添加到舞台的对象添加事件,容易出现加载失败的现象,但可以设置startDrag().</code></pre>
 </li>
 </ul>
 

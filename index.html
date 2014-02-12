@@ -62,20 +62,15 @@
 <blockquote>
 <p>D:\tools\Sublime Text 2\sublime_text.exe “%1”  </p>
 </blockquote>
-<p>保存.完成添加右键菜单  </p>
-<p>2.给Open with Sublime Text 2添加Icon<br>添加完右键菜单 总感觉那里怪怪的 原来是菜单上缺少Icon<br>找到Open With Sublime Text 2 的注册表所在项<br>新建 <strong>字符串值</strong> 名称为Icon 类型REG_SZ 数据填写</p>
-<blockquote>
-<p>D:\tools\Sublime Text 2\sublime_text.exe,0  </p>
-</blockquote>
-<p>好了这样就添加上Icon了.  </p>
-<blockquote>
-<p>PS:注意是在Open with Sublime Text 2 下建立新的 <strong>字符串值</strong>  不是在command下</p>
-</blockquote>
-
+<p>保存.完成添加右键菜单<br>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2014/01/15/sublime_text_add_open_with_sublime_text_menu/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -160,7 +155,12 @@ tf.colortransform = colortf;
         <p>本文章用来记录as移植到scaleform的问题汇总 <strong>不定期更新</strong>  </p>
 <h3>Sprite</h3>
 <ul>
-<li>startDrag和stopDrag要成对使用  <pre><code>  如果没有执行stopDrag操作,会阻挡之后的点击事件.</code></pre>
+<li><strong>startDrag</strong>和<strong>stopDrag</strong>要成对使用  <pre><code>  如果没有执行stopDrag操作,会阻挡之后的点击事件.  </code></pre>
+</li>
+</ul>
+<h3>Session</h3>
+<ul>
+<li>尽量不要给刚刚add到舞台对象添加事件 <strong>addEventListener</strong>  <pre><code>  给刚刚添加到舞台的对象添加事件,容易出现加载失败的现象,但可以设置startDrag().</code></pre>
 </li>
 </ul>
 
@@ -197,21 +197,15 @@ tf.colortransform = colortf;
         <p>发一篇MarkDown的文章试试  </p>
 <p>这是使用 Sublime Text 2 MarkDown写的  </p>
 <ul>
-<li>sublime Text 2快捷键<br>1.Ctrl+i <em>斜体你好</em>  <em>abc</em><br>2.Ctrl+b <strong>粗体你好</strong><br>3.Ctrl+super+k 超链接<a href="http://www.jaoye.com" target="_blank">主页</a><br>4.super+shift+k 图片<img src="http://www.baidu.com/img/bdlogo.gif" alt=""><br>5.ctrl+shift+. = 添加引用<br>6.ctrl+shift+, = 刪除引用<br>7.ctrl+123456 设置6级不同的标题  <blockquote>
-<h1>一级标题</h1>
-<h2>二级标题</h2>
-<h3>三级标题</h3>
-<h4>四级标题</h4>
-<h5>五级标题</h5>
-<h6>六级标题</h6>
-</blockquote>
-</li>
-</ul>
-
+<li>sublime Text 2快捷键<br>1.Ctrl+i <em>斜体你好</em>  <em>abc</em><br>2.Ctrl+b <strong>粗体你好</strong><br>3.Ctrl+super+k 超链接<a href="http://www.jaoye.com" target="_blank">主页</a><br>4.super+shift+k 图片<img src="http://www.baidu.com/img/bdlogo.gif" alt=""><br>5.ctrl+shift+. = 添加引用<br>6.ctrl+shift+, = 刪除引用<br>7.ctrl+123456 设置6级不同的标题<br>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2013/12/16/test/#more" class="more-link">Read More</a>
+          </div>
         
         
       
